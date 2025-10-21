@@ -15,7 +15,7 @@ spec:
     path: environments/dev
   destination:
     server: https://kubernetes.default.svc
-    namespace: simple-python-app-dev
+    namespace: simple-python-dev
   syncPolicy:
     automated:
       prune: true
@@ -35,5 +35,5 @@ spec:
     - name: "Environment"
       value: "Development"
     - name: "Namespace"
-      value: "simple-python-app-dev"
+      value: "simple-python-dev"
 

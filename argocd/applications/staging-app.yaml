@@ -15,7 +15,7 @@ spec:
     path: environments/staging
   destination:
     server: https://kubernetes.default.svc
-    namespace: simple-python-app-staging
+    namespace: simple-python-staging
   syncPolicy:
     automated:
       prune: true
@@ -35,5 +35,5 @@ spec:
     - name: "Environment"
       value: "Staging"
     - name: "Namespace"
-      value: "simple-python-app-staging"
+      value: "simple-python-staging"
 

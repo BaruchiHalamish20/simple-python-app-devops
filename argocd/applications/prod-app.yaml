@@ -15,7 +15,7 @@ spec:
     path: environments/prod
   destination:
     server: https://kubernetes.default.svc
-    namespace: simple-python-app-prod
+    namespace: simple-python-prod
   syncPolicy:
     automated:
       prune: false  # Manual sync for production
@@ -35,4 +35,4 @@ spec:
     - name: "Environment"
       value: "Production"
     - name: "Namespace"
-      value: "simple-python-app-prod"
+      value: "simple-python-prod"
