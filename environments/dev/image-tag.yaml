@@ -4,6 +4,6 @@ metadata:
   name: image-info
   namespace: simple-python-dev
 data:
-  IMAGE_TAG: "3bedd5d"
-  LAST_UPDATED: "2025-10-21T17:48:28Z"
+  IMAGE_TAG: "006c69f"
+  LAST_UPDATED: "2025-10-21T18:31:57Z"
   ENVIRONMENT: "dev"
