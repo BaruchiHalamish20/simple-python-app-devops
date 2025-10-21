@@ -8,5 +8,5 @@ resources:
 
 images:
   - name: simple-python-app
-    newName: ghcr.io/baruchihalaish20/simple-python-app
+    newName: ghcr.io/baruchihalamish20/simple-python-app
     newTag: latest
