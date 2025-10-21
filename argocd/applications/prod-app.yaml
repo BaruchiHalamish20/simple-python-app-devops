@@ -1,0 +1,38 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: simple-python-app-prod
+  namespace: argocd
+  labels:
+    app.kubernetes.io/name: simple-python-app
+    app.kubernetes.io/instance: prod
+    app.kubernetes.io/part-of: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/BaruchiHalamish20/simple-python-app-devops
+    targetRevision: HEAD
+    path: environments/prod
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: simple-python-app-prod
+  syncPolicy:
+    automated:
+      prune: false  # Manual sync for production
+      selfHeal: false
+    syncOptions:
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground
+      - PruneLast=true
+    retry:
+      limit: 5
+      backoff:
+        duration: 5s
+        factor: 2
+        maxDuration: 3m
+  revisionHistoryLimit: 10
+  info:
+    - name: "Environment"
+      value: "Production"
+    - name: "Namespace"
+      value: "simple-python-app-prod"
