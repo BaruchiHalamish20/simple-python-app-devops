@@ -9,4 +9,4 @@ resources:
 images:
   - name: simple-python-app
     newName: ghcr.io/baruchihalaish20/simple-python-app
-    newTag: latest
+    newTag: 3bedd5d
